@@ -5,9 +5,32 @@ const app = express();
 
 app.use(morgan("dev"));
 
-app.use((req, res) => {
-  res.send("Hello, world!");
-});
+const validTypes = [
+  `Bug`,
+  `Dark`,
+  `Dragon`,
+  `Electric`,
+  `Fairy`,
+  `Fighting`,
+  `Fire`,
+  `Flying`,
+  `Ghost`,
+  `Grass`,
+  `Ground`,
+  `Ice`,
+  `Normal`,
+  `Poison`,
+  `Psychic`,
+  `Rock`,
+  `Steel`,
+  `Water`,
+];
+
+function handleGettypes(req, res) {
+  res.json(validTypes);
+}
+
+app.get("/types", handleGettypes);
 
 const PORT = 8000;
 
