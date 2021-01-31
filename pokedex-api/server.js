@@ -68,7 +68,7 @@ app.get("/pokemon", function handleGetPokemeon(req, res) {
   }
   // filter pokemon by type if type query param is present
   if (type) {
-    response = response.filter((pokemen) => {
+    response = response.filter((pokemon) => {
       pokemon.type.includes(req.query.type);
     });
   }
