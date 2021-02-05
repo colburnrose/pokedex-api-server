@@ -9,7 +9,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "engines": {
+    "node": "14.15.1"
+  },
+  "author": "Colburn Sanders",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
